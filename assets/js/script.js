@@ -29,6 +29,17 @@ function showValues()
     list.innerHTML = '';
     for(let i = 0; i < values.length; i++)
     {
-        list.innerHTML = `<li>${values[i]['name']}</li>`;
+        list.innerHTML += `<li>${values[i]['name']}<button id='btn-ok' onclick='removeItem("${values[i]['name']}")'>ok</button></li>`;
     }
 }
+
+function removeItem(data)
+{
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    let index = values.findIndex(x => x.name == data);
+    values.splice(index,1);
+    localStorage.setItem(localStorageKey,JSON.stringify(values));
+    showValues();
+}
+
+showValues();
