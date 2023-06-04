@@ -1,18 +1,18 @@
 :root {
     --color-dark: rgb(14, 14, 14);
     --color-dark2: rgb(32, 32, 32);
-    --color-dark3: rgb(22, 22, 22);
+    --color-dark3: rgba(22, 22, 22, 0.103);
     --color-white: #fff;
     --color-green: rgb(103, 195, 80);
-    --color-green2: rgb(51, 149, 26);
+    --color-green2: rgb(29, 124, 5);
     --color-red: rgb(184, 40, 35);
     --color-red2: rgb(146, 22, 17);
 }
 
 body {
     font-family: 'Lato';
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,6 @@ body {
 
 #input-new-task,
 #btn-new-task {
-    border: none;
     font-size: 1rem;
     outline: none;
     padding: 1rem;
@@ -46,8 +45,8 @@ body {
 }
 
 #btn-new-task {
-    background-color: var(--color-dark2);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-dark2);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -56,7 +55,8 @@ body {
 }
 
 #btn-new-task:hover {
-    background-color: var(--color-dark3);
+    background-color: var(--color-dark2);
+    color: var(--color-white);
 }
 
 #to-do-list {
@@ -100,4 +100,35 @@ body {
 
 #btn-ok:hover {
     background-color: var(--color-green2);
+}
+
+/* footer */
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    color: var(--color-dark2);
+    margin: -4rem;
+}
+
+#icon-footer {
+    color: var(--color-dark2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.96);
+    cursor: pointer;
+    padding: .5rem;
+}
+
+#icon-footer:hover {
+    opacity: .8;
+}
+
+.titulo {
+    font-size: clamp(8px, 5vw, 22px);
+    margin: 5rem auto;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-dark2);
 }
