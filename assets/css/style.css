@@ -44,6 +44,10 @@ body {
     border-radius: 1rem;
 }
 
+#input-new-task:hover {
+    opacity: 0.8;
+}
+
 #btn-new-task {
     background-color: var(--color-white);
     color: var(--color-dark2);
@@ -55,7 +59,7 @@ body {
 }
 
 #btn-new-task:hover {
-    background-color: var(--color-dark2);
+    background-color: var(--color-blue);
     color: var(--color-white);
 }
 
